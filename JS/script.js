@@ -1,11 +1,12 @@
 let num = +prompt(`Введите число`);
 
-function func(num){
-    for (let i = 2; i < Math.sqrt(num); i++) {
+function func(){
+    if(num < 2) return false;
+    for (let i = 2; i < num / 2; i++) {
         if(num % i === 0) {
             return false;
         }
     }
-        return true;
+    return true;
 }
-alert(func());
+alert(func(num));
